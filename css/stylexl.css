@@ -1,0 +1,66 @@
+.first-sec .wrap .get-started {
+  width: 93%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+}
+
+.first-sec .wrap .get-started input {
+  -ms-flex-preferred-size: 60%;
+      flex-basis: 60%;
+}
+
+.first-sec .wrap .get-started button {
+  margin-left: 5%;
+  -ms-flex-preferred-size: 35%;
+      flex-basis: 35%;
+}
+
+.second-sec p.sec-sec-p {
+  width: 80%;
+}
+
+.second-sec .box {
+  width: 50%;
+}
+
+.third-sec .get-started button {
+  width: 52%;
+}
+
+footer .wrap {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+footer .wrap .footer-element {
+  -ms-flex-preferred-size: 15%;
+      flex-basis: 15%;
+}
+
+footer .wrap .footer-element:first-of-type {
+  -ms-flex-preferred-size: 230px;
+      flex-basis: 230px;
+}
+
+footer .wrap .footer-element:nth-of-type(2) {
+  margin-left: 15px;
+}
+
+footer .wrap .footer-element:nth-of-type(3) {
+  margin-left: 5px;
+}
+
+footer .media-icons {
+  padding-top: 70px;
+  padding-right: 60px;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+}
+/*# sourceMappingURL=stylexl.css.map */

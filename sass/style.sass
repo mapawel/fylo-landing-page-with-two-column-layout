@@ -1,3 +1,5 @@
+@import reset
+
 $colPrimVeryDarkBlue: hsl(243, 87%, 12%)
 $colPrimDesaturatedBlue: hsl(238, 22%, 44%)
 $colAccBrightBlue: hsl(224, 93%, 58%)
@@ -6,30 +8,259 @@ $colNeutLightGrayishBlue: hsl(240, 75%, 98%)
 $colNeutLightGray: hsl(0, 0%, 75%)
 
 \:root
-    font-size: 16px
+    font-size: 15px
 
-// ### Headings, Call-to-actions, Header Navigation
-// font-family: 'Raleway', sans-serif;
-// ### Body
-// font-family: 'Open Sans', sans-serif;
+// general elements
+html
+    scroll-behavior: smooth
 
 body
     font-family: 'Open Sans', sans-serif
 
+.wrap
+    max-width: 1000px
+    width: 83vw
+    margin: 0 auto
 
+.get-started
+    display: flex
+    flex-wrap: wrap
+    margin-top: 20px
+    input
+        padding: 10px
+        margin: 7px 0
+        border-radius: 3px
+        &::placeholder
+            color: $colNeutLightGray
+            font-family: 'Open Sans', sans-serif
 
+    button
+        margin: 7px 0
+        padding: 10px
+        font-family: 'Open Sans', sans-serif
+        color: #ffffff
+        background-color: $colAccBrightBlue
+        border: none
+        border-radius: 3px
+        box-shadow: 0 5px 7px rgba(0,0,0,.15)
 
-// Frontend Mentor Footer
-footer
-    position: absolute
-    bottom: 0
-    left: 50%
-    transform: translateX(-50%)
+a:hover
+    color: $colAccModerateCyan
 
-.attribution
-    font-size: 11px
+button:hover
+    box-shadow: 0 0 10px $colAccModerateCyan
+    cursor: pointer
+
+// navigation
+.logo
+    display: block
+    width: 75px
+nav .wrap
+    display: flex
+    justify-content: space-between
+    padding: 15px 0
+    font-family: 'Raleway', sans-serif
+    margin-bottom: 100px
+    ul
+        margin: 0
+    li
+        display: inline-block
+        padding: 0 8px
+        font-size: .8rem
+        a
+            text-decoration: none
+            color: #000
+            transition: color .3s, text-shadow .3s
+            &:hover
+                color: $colAccModerateCyan
+                text-shadow: 0 0 2px $colAccModerateCyan
+    li:last-child
+        padding-right: 0
+
+// main- firs section
+.first-sec
     text-align: center
+    h2
+        padding: 20px 0
+    .wrap
+        display: flex
+        flex-wrap: wrap
+        justify-content: space-around
+        align-items: center
+        .sec-element
+            flex-basis: 100%
+        .get-started
+            display: flex
+            input
+                flex-basis: 100%
+                border: 1px solid #000
+                &::placeholder
+                    padding: 10px
+            button
+                flex-basis: 100%
+                transition: box-shadow .3s
+    .img-one
+        display: block
+        width: 90%
+        margin: 0 auto
 
-.attribution
+// main- second section
+.img-two
+    display: block
+    width: 90%
+    margin: 0 auto 80px
+
+.second-sec
+    background-color: $colNeutLightGrayishBlue
+    position: relative
+    margin-top: 120px
+    padding-top: 40px
+    padding-bottom: 80px
+    p
+        padding: 5px 0
+    h4
+        padding: 15px 0
+        text-align: center
+    .wrap
+        display: flex
+        flex-wrap: wrap
+        justify-content: space-around
+        align-items: center
+    .link
+        margin: 30px 0
+        text-align: center
+        a
+            border-bottom: 2px solid $colAccModerateCyan
+            padding: 5px 0
+            text-decoration: none
+            color: $colAccModerateCyan
+            transition: text-shadow .3s
+            p
+                display: inline-block
+            img
+                vertical-align: middle
+                padding-left: 10px
+            &:hover
+                text-shadow: 0 0 3px $colAccModerateCyan
+    .box
+        width: 90%
+        margin: 0 auto
+        padding: 20px
+        background-color: #ffffff
+        border-radius: 5px
+        box-shadow: 0 0 15px hsl(0, 0%, 88%)
+        font-size: .7rem
+        line-height: 1.2rem
+        .signature
+            display: flex
+            align-items: center
+            img
+                border-radius: 50%
+                width: 25px
+            p
+                font-weight: bold
+                margin-left: 8px
+                padding-bottom: 0
+                line-height: .8rem
+                span
+                    font-weight: normal
+                    font-size: .5rem
+    &::before
+       content: ''
+       display: block
+       width: 100%
+       height: 53px
+       position: absolute
+       top: -53px
+       background-image: url('../images/bg-curve-mobile.svg')
+       background-repeat: no-repeat
+       background-size: cover
+       background-position-x: 50%
+
+// main- section third
+.third-sec
+    background-color: $colPrimDesaturatedBlue
+    color: #fff
+    text-align: center
+    padding: 70px 0
+    p
+        padding: 5px 0
+    h4
+        margin-bottom: 15px
+    .wrap
+        display: flex
+        flex-wrap: wrap
+        justify-content: space-around
+        align-items: center
+        .sec-element
+            flex-basis: 100%
+    .get-started
+        input
+            width: 80%
+            margin-left: auto
+            margin-right: auto
+            border: none
+        button
+            width: 80%
+            margin-left: auto
+            margin-right: auto
+            transition: box-shadow .3s
+
+// footer
+footer
+    background-color: $colPrimVeryDarkBlue
+    color: #ffffff
+    padding: 20px 0
+    line-height: 2.4rem
+    .wrap
+        padding: 0 20px
+        display: flex
+        flex-wrap: wrap
+        justify-content: space-around
+        .footer-element
+            flex-basis: 100%
+            margin: 40px 0 0
+    .logo-footer
+        display: block
+        margin-bottom: 20px
+    li
+        display: block
     a
-        color: hsl(228, 45%, 44%)
+        text-decoration: none
+        color: #fff
+        transition: color .3s
+    .footer-contact-el p, .footer-contact-el img        
+        display: inline-block
+        vertical-align: middle
+        margin-right: 15px
+    .media-icons
+        display: flex
+        justify-content: center
+        .icon
+            border: solid 2px #fff
+            border-radius: 50%
+            margin: 5px
+            transition: border .3s
+            img
+                display: block
+                padding: 7px
+                width: 27px
+            &:hover
+                border: solid 2px $colAccModerateCyan
+            &:hover>img
+                filter: invert(52%) sepia(57%) saturate(427%) hue-rotate(121deg) brightness(93%) contrast(82%)
+
+// footer with attributions
+footer-attribution
+    background-color: $colNeutLightGray
+    display: flex
+    flex-wrap: wrap
+    justify-content: center
+    padding: 10px
+    .attribution
+        font-size: 11px
+        text-align: center
+        flex-basis: 100%
+        padding: 5px
+        a
+            color: hsl(228, 45%, 44%)
